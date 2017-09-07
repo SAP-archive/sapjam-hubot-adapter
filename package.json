@@ -1,0 +1,30 @@
+{
+  "name": "hubot-sapjam",
+  "version": "1.0.0",
+  "description": "A Hubot adapter for SAP Jam",
+  "main": "src/adapter.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/hubot-sapjam.git"
+  },
+  "keywords": [
+    "hubot"
+  ],
+  "author": "SAP AG",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "parent-require": "^1.0.0",
+    "pluralize": "^5.0.0",
+    "request": "^2.81.0",
+    "striptags": "^3.0.1"
+  },
+  "devDependencies": {
+    "coffee-script": ">=1.2.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2.0"
+  }
+}
