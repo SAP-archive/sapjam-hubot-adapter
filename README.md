@@ -17,7 +17,7 @@ For more information on SAP Jam, please visit https://www.sap.com/products/enter
 
 First, you need to [set up a Jam alias user and webhook notification](https://help.sap.com/viewer/u_collaboration_dev_help/a711035f7d824819a38764b530e0b5a9.html) for your bot with the following callback URL: `https://your-bot-host-here/hubot/sapjam-listener`
 
-Then, you'll need to [install Node.js and NPM](https://docs.npmjs.com/getting-started/installing-node), followed by [setup for your Hubot](https://hubot.github.com/docs/). Next, clone this repository into directory which will contain your bot code. The repository should be cloned to sub-directory of your bot. Finally, generate your bot using the SAP Jam adapter as the default adapter, using the Yeoman Hubot generator:
+Then, you'll need to [install Node.js and NPM](https://docs.npmjs.com/getting-started/installing-node), followed by [setup for your Hubot](https://hubot.github.com/docs/). Next, clone this repository into directory which will contain your bot code. The repository should be cloned to sub-directory of your bot, and should be named 'hubot-sapjam'. Finally, generate your bot using the SAP Jam adapter as the default adapter, using the Yeoman Hubot generator:
 
 ```
 yo hubot --adapter=sapjam
