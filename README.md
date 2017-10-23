@@ -1,21 +1,33 @@
 # SAP Jam Adapter for Hubot
 
+## Description
+
 The SAP Jam Adapter allows Hubot to easily communicate with Jam users through Jam Messages, Feed Entries, Forums and more. Little to no knowledge of the Jam OData API or its webhook notifications is needed, making the development of Hubot scripts for Jam extremely simple.
 
----
+## Requirements
 
-## Installation
+This adapater requires access to an SAP Jam Collaboration Enterprise Edition tenant. A developer tenant of SAP Jam is also available as part of the SAP Cloud Platform Free Trial Account.
+
+For more information on the SAP Cloud Platform Free Trial Account, please visit https://cloudplatform.sap.com/try.html
+
+For more information on SAP Jam, please visit https://www.sap.com/products/enterprise-social-collaboration.html
+
+
+## Download and Installation
 
 First, you need to [set up a Jam alias user and webhook notification](https://help.sap.com/viewer/u_collaboration_dev_help/a711035f7d824819a38764b530e0b5a9.html) for your bot with the following callback URL: `https://your-bot-host-here/hubot/sapjam-listener`
 
-Then, you'll need to [install Node.js and NPM](https://docs.npmjs.com/getting-started/installing-node), followed by [setup for your Hubot](https://hubot.github.com/docs/). You can set the Jam adapter as the default when using the Yeoman Hubot generator:
+Then, you'll need to [install Node.js and NPM](https://docs.npmjs.com/getting-started/installing-node), followed by [setup for your Hubot](https://hubot.github.com/docs/). Next, clone this repository into directory which will contain your bot code. The repository should be cloned to sub-directory of your bot. Finally, generate your bot using the SAP Jam adapter as the default adapter, using the Yeoman Hubot generator:
 
 ```
 yo hubot --adapter=sapjam
 ```
+
+## Configuration
+
 To use the adapter, set the following environment variables:
 
-- `HUBOT_SAPJAM_SERVER` Your Jam host (e.g. https://example.sapjam.com)
+- `HUBOT_SAPJAM_SERVER` Your Jam host (e.g. https://developer.sapjam.com)
 - `HUBOT_SAPJAM_BOT_ID` Your bot's Jam alias user ID
 - `HUBOT_SAPJAM_OAUTH_TOKEN` Your bot's Jam alias user OAuth token
 - `HUBOT_SAPJAM_VERIFICATION_TOKEN` Your bot's Jam webhook notification verification token
@@ -27,8 +39,6 @@ bin/hubot --name your-bot-alias-username-here --adapter sapjam
 ```
 
 And that's it! [Hubot scripts](https://www.npmjs.com/browse/keyword/hubot-scripts) compatible with the base Hubot can now talk to Jam - simply follow the setup and configuration instructions for each script as normal.
-
----
 
 ## Scripting
 
@@ -110,17 +120,10 @@ Lastly, the adapter also supports at-mentions for `send` and `reply`, using the 
       robot.send envelope, "I'm so happy to be part of #{group_name}! Thanks for inviting me, @(#{envelope.user.name})(#{envelope.user.id})!"
 ```
 
+## How to obtain support
+
+Please visit the following page if you require support: https://www.sap.com/products/enterprise-social-collaboration.html#support
+
+
 # License
-Copyright 2017, SAP AG
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This project is licensed under the Apache Software License, v. 2 except as noted otherwise in the LICENSE file.
